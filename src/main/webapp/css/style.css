@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --grey-color: rgb(53,58,64);
+  --green-color: rgb(39,168,68);
+  --green-button: rgb(150,201,62);
+  --first-color-footer: rgb(28,54,67);
+  --last-color-footer: rgb(30,83,114);
+  --js-color: rgb(254,193,6);
+  --react-color: rgb(21,163,183);
+  --negocios-color: rgb(107,117,126);
+  --startup-color: rgb(219,54,68);
+  --card-border-color: rgb(223,223,223);
+}
+
+header {
+  width: 100%;
+  height: 13vh;
+  background-color: var(--grey-color);
+  position: fixed;
+  z-index: 999;
+}
+header nav {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+header nav .logo-container .logo {
+  height: 70px;
+  width: auto;
+}
+header nav .logo-container p {
+  display: inline;
+  color: white;
+  font-weight: bold;
+  padding: 0.35rem;
+}
+header nav .header-list {
+  position: fixed;
+  top: 13vh;
+  right: 0;
+  width: 100%;
+  height: 25vh;
+  background-color: var(--grey-color);
+  transform: translateY(-200%);
+  list-style-type: none;
+}
+header nav .header-list li {
+  padding: 5px 10px;
+}
+header nav .header-list a {
+  color: white;
+  text-decoration: none;
+}
+header nav .header-list .tickets {
+  color: var(--green-color);
+}
+header nav .menu-toggle {
+  width: 3rem;
+  margin: 1rem;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+header nav .open {
+  transform: translateY(0%);
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.intro {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background-image: url(../img/ba1.jpg);
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.intro section {
+  margin: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  text-align: end;
+  color: white;
+  z-index: 500;
+}
+.intro section p {
+  margin: 1rem 0;
+}
+.intro section .btn-orador {
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.intro section .btn-comprar {
+  padding: 10px;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 0.35em;
+  cursor: pointer;
+}
+
+.oradores {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.oradores .titulo {
+  margin: 10px;
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+}
+.oradores span {
+  font-size: 2em;
+}
+.oradores .oradores-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.oradores .oradorCard {
+  width: 300px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  border: 1px solid var(--card-border-color);
+}
+.oradores .oradorCard .pictureOrador1 {
+  width: 100%;
+  height: 50%;
+  background-image: url(../img/steve.jpg);
+  background-size: cover;
+}
+.oradores .oradorCard .pictureOrador2 {
+  width: 100%;
+  height: 50%;
+  background-image: url(../img/bill.jpg);
+  background-size: cover;
+}
+.oradores .oradorCard .pictureOrador3 {
+  width: 100%;
+  height: 50%;
+  background-image: url(../img/ada.jpeg);
+  background-size: cover;
+}
+.oradores .oradorCard .descripcionOrador {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.oradores .oradorCard .descripcionOrador .especialidad {
+  display: flex;
+  flex-direction: row;
+  font-weight: bolder;
+  font-size: 0.75em;
+  text-align: center;
+  margin: 10px;
+}
+.oradores .oradorCard .descripcionOrador .especialidad .javascript {
+  display: inline;
+  margin: 0 5px 0 0;
+  padding: 3px;
+  background-color: var(--js-color);
+  border-radius: 5px;
+}
+.oradores .oradorCard .descripcionOrador .especialidad .react {
+  display: inline;
+  margin: 0 5px 0 0;
+  padding: 3px;
+  background-color: var(--react-color);
+  color: white;
+  border-radius: 5px;
+}
+.oradores .oradorCard .descripcionOrador .especialidad .negocios {
+  display: inline;
+  margin: 0 5px 0 0;
+  padding: 3px;
+  background-color: var(--negocios-color);
+  color: white;
+  border-radius: 5px;
+}
+.oradores .oradorCard .descripcionOrador .especialidad .startup {
+  display: inline;
+  margin: 0 5px 0 0;
+  padding: 3px;
+  background-color: var(--startup-color);
+  color: white;
+  border-radius: 5px;
+}
+.oradores .oradorCard .descripcionOrador h3 {
+  margin: -5px 5px 5px 10px;
+}
+.oradores .oradorCard .descripcionOrador .textOrador {
+  margin: 10px;
+  text-align: left;
+}
+
+.lugar_fecha {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey-color);
+}
+.lugar_fecha .hawaii {
+  width: inherit;
+  height: 50%;
+  background-image: url(../img/honolulu.jpg);
+  background-size: cover;
+}
+.lugar_fecha .lugarFecha_texto {
+  margin: 20px;
+  color: white;
+}
+.lugar_fecha .lugarFecha_texto h2 {
+  padding: 5px 0;
+}
+.lugar_fecha .lugarFecha_texto p {
+  padding: 5px 0;
+  line-height: 1.5rem;
+  font-size: 1em;
+}
+.lugar_fecha .lugarFecha_texto button {
+  margin: 10px 0;
+  padding: 8px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario {
+  width: 100%;
+  height: 68vh;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+.formulario .tituloForm {
+  margin-top: 10px;
+  font-size: 0.75em;
+  padding-bottom: 10px;
+}
+.formulario .tituloForm span {
+  font-size: 2em;
+  font-weight: bold;
+}
+.formulario .instruccionForm {
+  font-size: 0.75em;
+  padding-bottom: 10px;
+}
+.formulario .instruccionForm span {
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+}
+.formulario .form input[type=text] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.formulario .form textarea {
+  width: 80%;
+  height: 35%;
+  padding: 5px;
+}
+.formulario .form p {
+  padding-top: 10px;
+  font-size: 0.75em;
+  color: var(--grey-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.formulario button {
+  width: 80%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: var(--green-button);
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(to right, var(--first-color-footer), var(--last-color-footer));
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer ul li {
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 786px) {
+  header {
+    z-index: 999;
+  }
+  header nav .logo-container {
+    margin-left: 10px;
+  }
+  header nav .header-list {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    top: 0;
+    margin-right: 10px;
+    background-color: var(--grey-color);
+    transform: none;
+    list-style-type: none;
+  }
+  header nav .header-list li {
+    padding: 5px 10px;
+  }
+  header nav .header-list a {
+    color: white;
+    text-decoration: none;
+  }
+  header nav .header-list .tickets {
+    color: var(--green-color);
+  }
+  header nav .menu-toggle {
+    display: none;
+  }
+  .intro {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .intro section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+  }
+  .lugar_fecha {
+    display: flex;
+    flex-direction: row;
+    height: 75vh;
+  }
+  .lugar_fecha .hawaii {
+    width: 50%;
+    height: 100%;
+  }
+  .lugar_fecha .lugarFecha_texto {
+    width: 50%;
+  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 67vh;
+    margin-top: 10px;
+  }
+  .formulario .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .formulario .form input[type=text] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .formulario .form textarea {
+    width: 80%;
+    height: 50%;
+    padding: 5px;
+  }
+  .formulario .form p {
+    font-size: 0.75em;
+    color: var(--grey-color);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

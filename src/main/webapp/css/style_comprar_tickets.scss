@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --grey-color: rgb(53,58,64);
+    --green-color: rgb(39,168,68);
+    --green-button: rgb(150,201,62);
+    --first-color-footer: rgb(28,54,67);
+    --last-color-footer: rgb(30,83,114);
+    --js-color: rgb(254,193,6);
+    --react-color: rgb(21,163,183);
+    --negocios-color: rgb(107,117,126);
+    --startup-color: rgb(219,54,68);
+    --card-border-color: rgb(223,223,223);
+    --color-border-student: rgb(0, 123, 255);
+    --color-border-trainee: rgb(23, 162, 184);
+    --color-border-junior: rgb(255, 193, 7);
+    --color-letter-total: rgb(0, 64, 165);
+    --color-bg-total: rgb(204, 229, 255);
+    --color-border-total: rgb(184, 218, 255);
+}
+
+header {
+    width: 100%;
+    height: 13vh;
+    background-color: var(--grey-color);
+    position: fixed;
+    z-index: 999;
+
+    nav {
+        width: 100%;
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        .logo-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            cursor: pointer;
+            
+            .logo {
+                height: 70px;
+                width: auto;
+            }
+    
+            p {
+                display: inline;
+                color: white;
+                font-weight: bold;
+                padding: 0.35rem;
+            }
+        }
+
+        .header-list {
+            position: fixed;
+            top: 13vh;
+            right: 0;
+            width: 100%;
+            height: 25vh;
+            background-color: var(--grey-color);
+            transform: translateY(-200%);
+            list-style-type: none;
+            
+            li {
+                padding: 5px 10px;    
+            }
+
+            a {
+                color: white;
+                text-decoration: none; 
+            }
+            
+            .tickets {
+                color: var(--green-color);
+            }
+        }
+
+        .menu-toggle {
+            width: 3rem;
+            margin: 1rem;
+            border: 1px solid grey;
+            cursor: pointer;
+        }
+
+        .open {
+            transform: translateY(0%);
+        }
+    }
+}
+
+// REPOSICIONAMIENTO DEL MAIN DE LA PÁGINA
+
+main {
+    position: relative;
+    top: 13vh;
+}
+
+// ESTILOS PARA LAS TARJETAS DE DESCUENTOS
+
+.tarjetas_descuentos {
+    width: 100%;
+    height: 30vh;
+
+    padding: 10px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .tarjeta_estudiante {
+        width: 80%;
+        height: 90%;
+
+        margin: 2px;
+        border: 1px solid var(--color-border-student);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+
+        .valor_descuento {
+            font-weight: bolder;
+        }
+
+        .requisito {
+            color: grey;
+        }
+    }
+
+    .tarjeta_trainee {
+        width: 80%;
+        height: 90%;
+
+        margin: 2px;
+        border: 1px solid var(--color-border-trainee);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+
+        .valor_descuento {
+            font-weight: bolder;
+        }
+
+        .requisito {
+            color: grey;
+        }
+    }
+    
+    .tarjeta_junior {
+        width: 80%;
+        height: 90%;
+
+        margin: 2px;
+        border: 1px solid var(--color-border-junior);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+
+        .valor_descuento {
+            font-weight: bolder;
+        }
+
+        .requisito {
+            color: grey;
+        }
+    }
+}
+
+
+// ESTILOS DEl FORMULARIO COMPLETO
+
+.formulario_compra {
+    width: 100%;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    text-align: center;
+
+    p {
+        padding: 5px 0;
+    }
+
+    h1 {
+        padding: 5px 0;
+    }
+
+    .form_tickets {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input[type=text] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type=email] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        
+        input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        .total_compra {
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 5px;
+            padding: 5px;
+
+            border: 1px solid var(--color-border-total);
+            border-radius: 5px;
+            background-color: var(--color-bg-total);
+
+            color: var(--color-letter-total);
+        }
+
+        .botones_form {
+            margin-top: 10px;
+
+            .boton_formulario_reset {
+                width: 180px;
+                padding: 10px;
+                margin-left: 5px;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--green-button);
+                color: white;
+
+                cursor: pointer;
+            }
+            
+            .boton_formulario_resumen {
+                width: 180px;
+                padding: 10px;
+                margin-left: 5px;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--green-button);
+                color: white;
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// ESTILOS DEL FOOTER DE LA PAGINA
+
+footer {
+    position: relative;
+    top: 5vh;
+
+    width: 100%;
+    height: fit-content;
+    
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(to right, 
+        var(--first-color-footer), 
+        var(--last-color-footer));
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li {
+            padding: 10px;
+            text-decoration: none;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: white;
+                
+            }
+        }
+    }
+}
+
+// COMIENZO DE ESTILOS DE LA VERSION DE ESCRITORIO
+
+@media only screen and (min-width: 786px) {
+    
+    header {
+        z-index: 999;
+
+        nav {
+
+            .logo-container {
+                margin-left: 10px;
+            }
+
+            .header-list {
+                position: relative;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                margin-right: 10px;
+                background-color: var(--grey-color);
+                transform: none;
+                list-style-type: none;
+                
+                li {
+                    padding: 5px 10px;    
+                }
+    
+                a {
+                    color: white;
+                    text-decoration: none; 
+                }
+                
+                .tickets {
+                    color: var(--green-color);
+                }
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+        }
+    }
+
+    .tarjetas_descuentos{
+       
+        .tarjeta_estudiante{
+            width:20%;
+            margin: 0 5px;
+       } 
+
+       .tarjeta_trainee{
+            width:20%;
+            margin: 0 5px;
+       }
+
+       .tarjeta_junior{
+            width:20%;
+            margin: 0 5px;
+       }
+    }
+
+    .formulario_compra {
+
+        .form_tickets {
+            width: 50%;
+            height: 75%;
+    
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+    
+            input[type=text] {
+                width: 49%;
+                padding: 10px;
+            }
+
+            input[type=text]:first-child {
+                margin-right: 13px;
+            }
+    
+            input[type=email] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 5px;
+            }
+            
+            input[type=number] {
+                width: 49%;
+                padding: 10px;
+                margin-right: 13px;
+            }
+    
+            select {
+                width: 49%;
+                padding: 10px;
+                margin-bottom: 5px;
+            }
+    
+            .total_compra {
+                width: 100%;
+    
+                padding: 5px 10px;
+    
+                border: 1px solid var(--color-border-total);
+                border-radius: 5px;
+                background-color: var(--color-bg-total);
+    
+                color: var(--color-letter-total);
+
+                p {
+                    padding: 2px;
+                }
+            }
+
+            .botones_form{
+                width: 100%;
+
+                margin: 0;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                .boton_formulario_reset {
+                    width: 50%;
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+
+                .boton_formulario_resumen {
+                    width: 50%;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

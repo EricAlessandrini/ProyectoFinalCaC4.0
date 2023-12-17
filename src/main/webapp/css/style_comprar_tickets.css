@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --grey-color: rgb(53,58,64);
+  --green-color: rgb(39,168,68);
+  --green-button: rgb(150,201,62);
+  --first-color-footer: rgb(28,54,67);
+  --last-color-footer: rgb(30,83,114);
+  --js-color: rgb(254,193,6);
+  --react-color: rgb(21,163,183);
+  --negocios-color: rgb(107,117,126);
+  --startup-color: rgb(219,54,68);
+  --card-border-color: rgb(223,223,223);
+  --color-border-student: rgb(0, 123, 255);
+  --color-border-trainee: rgb(23, 162, 184);
+  --color-border-junior: rgb(255, 193, 7);
+  --color-letter-total: rgb(0, 64, 165);
+  --color-bg-total: rgb(204, 229, 255);
+  --color-border-total: rgb(184, 218, 255);
+}
+
+header {
+  width: 100%;
+  height: 13vh;
+  background-color: var(--grey-color);
+  position: fixed;
+  z-index: 999;
+}
+header nav {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+header nav .logo-container .logo {
+  height: 70px;
+  width: auto;
+}
+header nav .logo-container p {
+  display: inline;
+  color: white;
+  font-weight: bold;
+  padding: 0.35rem;
+}
+header nav .header-list {
+  position: fixed;
+  top: 13vh;
+  right: 0;
+  width: 100%;
+  height: 25vh;
+  background-color: var(--grey-color);
+  transform: translateY(-200%);
+  list-style-type: none;
+}
+header nav .header-list li {
+  padding: 5px 10px;
+}
+header nav .header-list a {
+  color: white;
+  text-decoration: none;
+}
+header nav .header-list .tickets {
+  color: var(--green-color);
+}
+header nav .menu-toggle {
+  width: 3rem;
+  margin: 1rem;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+header nav .open {
+  transform: translateY(0%);
+}
+
+main {
+  position: relative;
+  top: 13vh;
+}
+
+.tarjetas_descuentos {
+  width: 100%;
+  height: 30vh;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tarjetas_descuentos .tarjeta_estudiante {
+  width: 80%;
+  height: 90%;
+  margin: 2px;
+  border: 1px solid var(--color-border-student);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.tarjetas_descuentos .tarjeta_estudiante .valor_descuento {
+  font-weight: bolder;
+}
+.tarjetas_descuentos .tarjeta_estudiante .requisito {
+  color: grey;
+}
+.tarjetas_descuentos .tarjeta_trainee {
+  width: 80%;
+  height: 90%;
+  margin: 2px;
+  border: 1px solid var(--color-border-trainee);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.tarjetas_descuentos .tarjeta_trainee .valor_descuento {
+  font-weight: bolder;
+}
+.tarjetas_descuentos .tarjeta_trainee .requisito {
+  color: grey;
+}
+.tarjetas_descuentos .tarjeta_junior {
+  width: 80%;
+  height: 90%;
+  margin: 2px;
+  border: 1px solid var(--color-border-junior);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.tarjetas_descuentos .tarjeta_junior .valor_descuento {
+  font-weight: bolder;
+}
+.tarjetas_descuentos .tarjeta_junior .requisito {
+  color: grey;
+}
+
+.formulario_compra {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.formulario_compra p {
+  padding: 5px 0;
+}
+.formulario_compra h1 {
+  padding: 5px 0;
+}
+.formulario_compra .form_tickets {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulario_compra .form_tickets input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.formulario_compra .form_tickets input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.formulario_compra .form_tickets input[type=number] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.formulario_compra .form_tickets select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.formulario_compra .form_tickets .total_compra {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid var(--color-border-total);
+  border-radius: 5px;
+  background-color: var(--color-bg-total);
+  color: var(--color-letter-total);
+}
+.formulario_compra .form_tickets .botones_form {
+  margin-top: 10px;
+}
+.formulario_compra .form_tickets .botones_form .boton_formulario_reset {
+  width: 180px;
+  padding: 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--green-button);
+  color: white;
+  cursor: pointer;
+}
+.formulario_compra .form_tickets .botones_form .boton_formulario_resumen {
+  width: 180px;
+  padding: 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--green-button);
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  top: 5vh;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  padding: 10px;
+  background: linear-gradient(to right, var(--first-color-footer), var(--last-color-footer));
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer ul li {
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (min-width: 786px) {
+  header {
+    z-index: 999;
+  }
+  header nav .logo-container {
+    margin-left: 10px;
+  }
+  header nav .header-list {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: auto;
+    top: 0;
+    margin-right: 10px;
+    background-color: var(--grey-color);
+    transform: none;
+    list-style-type: none;
+  }
+  header nav .header-list li {
+    padding: 5px 10px;
+  }
+  header nav .header-list a {
+    color: white;
+    text-decoration: none;
+  }
+  header nav .header-list .tickets {
+    color: var(--green-color);
+  }
+  header nav .menu-toggle {
+    display: none;
+  }
+  .tarjetas_descuentos .tarjeta_estudiante {
+    width: 20%;
+    margin: 0 5px;
+  }
+  .tarjetas_descuentos .tarjeta_trainee {
+    width: 20%;
+    margin: 0 5px;
+  }
+  .tarjetas_descuentos .tarjeta_junior {
+    width: 20%;
+    margin: 0 5px;
+  }
+  .formulario_compra .form_tickets {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+  }
+  .formulario_compra .form_tickets input[type=text] {
+    width: 49%;
+    padding: 10px;
+  }
+  .formulario_compra .form_tickets input[type=text]:first-child {
+    margin-right: 13px;
+  }
+  .formulario_compra .form_tickets input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .formulario_compra .form_tickets input[type=number] {
+    width: 49%;
+    padding: 10px;
+    margin-right: 13px;
+  }
+  .formulario_compra .form_tickets select {
+    width: 49%;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .formulario_compra .form_tickets .total_compra {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid var(--color-border-total);
+    border-radius: 5px;
+    background-color: var(--color-bg-total);
+    color: var(--color-letter-total);
+  }
+  .formulario_compra .form_tickets .total_compra p {
+    padding: 2px;
+  }
+  .formulario_compra .form_tickets .botones_form {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .formulario_compra .form_tickets .botones_form .boton_formulario_reset {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .formulario_compra .form_tickets .botones_form .boton_formulario_resumen {
+    width: 50%;
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=style_comprar_tickets.css.map */
