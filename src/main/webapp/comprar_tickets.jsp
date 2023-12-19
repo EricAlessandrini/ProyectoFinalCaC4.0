@@ -57,7 +57,7 @@
             <form action="" class="form_tickets" id="form_tickets">
                 <input type="text" name="Nombre" id="nameUser" placeholder="Nombre" required>
                 <input type="text" name="Apellido" id="lastnameUser" placeholder="Apellido" required>
-                <input type="email" name="Correo" id="emailUser" placeholder="Correo ElectrÃ³nico" required>
+                <input type="email" name="Correo" id="emailUser" placeholder="Correo Electrónico" required>
                 <input type="number" name="cantidad" id="ticketAmount" placeholder="Cantidad de entradas" min="1" required>
                 <select name="categoria_descuento" id="discountCat" required>
                     <option value="0">--Seleccionar un descuento--</option>

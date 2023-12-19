@@ -5,19 +5,59 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>Integrador-ConfCaC</name>
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.2.3</version>
-      </plugin>
-    </plugins>
-  </build>
+  
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jakartaee>10.0.0</jakartaee>
+  </properties>
+  
+  <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+	        <groupId>jakarta.persistence</groupId>
+	        <artifactId>jakarta.persistence-api</artifactId>
+	        <version>3.1.0</version>
+    	</dependency>
+    	
+    	<dependency>
+	        <groupId>org.hibernate</groupId>
+	        <artifactId>hibernate-core</artifactId>
+	        <version>6.2.7.Final</version>
+	    </dependency>
+	    
+	    <dependency>
+	        <groupId>mysql</groupId>
+	        <artifactId>mysql-connector-java</artifactId>
+	        <version>8.0.33</version>
+	    </dependency>
+    </dependencies>
+    
+	<build>
+		<plugins>
+	      	<plugin>
+	        	<artifactId>maven-compiler-plugin</artifactId>
+	        	<version>3.8.1</version>
+	        	<configuration>
+	          		<release>17</release>
+	        	</configuration>
+	      	</plugin>
+	      	<plugin>
+	        	<artifactId>maven-war-plugin</artifactId>
+	        	<version>3.2.3</version>
+	      	</plugin>
+	    </plugins>
+	</build>
 </project>

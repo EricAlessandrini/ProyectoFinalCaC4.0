@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@
         <div class="intro" id="intro">
             <section> <!--Aca tiene que ir la imagen de fondo y la capa translucida-->
                 <h2>Conf Bs. As.</h2>
-                <p>Bs As por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que estÃ¡n creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                <p>Bs As por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
                 <div>
                     <button type="button" class="btn-orador">Quiero ser orador</button>
                     <button type="button" class="btn-comprar">Comprar tickets</button>
@@ -86,19 +86,20 @@
             <div class="hawaii" id="lugar_fecha"></div>
             <div class="lugarFecha_texto">
                 <h2>Bs As - Octubre</h2>
-                <p>Buenos Aires es la provincia y localidad mÃ¡s grande del estado de Argentina, en los Estados Unidos. Honolulu es la mÃ¡s sureÃ±a de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al Ã¡rea urbana en la cosa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximandamente 600km2 de superficie).</p>
-                <button type="button">ConocÃ© mÃ¡s</button>
+                <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la cosa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximandamente 600km2 de superficie).</p>
+                <button type="button">Conocé más</button>
             </div>
         </section>
         <section class="formulario" id="formulario">
             <a href="#" id="formularioAnchor"></a>
-            <p class="tituloForm">CONVIÃRTETE EN UN<br><span>ORADOR</span></p>
-            <p class="instruccionForm">AnÃ³tate como orador para dar una <span>charla ignite</span>. CuÃ©ntanos de quÃ© quieres hablar!</p>
-            <form action="" method="post" class="form">
+            <p class="tituloForm">CONVIÉRTETE EN UN<br><span>ORADOR</span></p>
+            <p class="instruccionForm">Anótate como orador para dar una <span>charla ignite</span>. Cuéntanos de qué quieres hablar!</p>
+            <form action="SvOrador" method="POST" class="form">
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre">
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                <textarea name="temario" id="" cols="30" rows="10" placeholder="Sobre quÃ© quieres hablar?"></textarea>
-                <p>Recuerda incluir un tÃ­tulo para tu charla</p>
+                <input type="text" name="email" id="email" placeholder="Correo Electronico">
+                <textarea name="temario" id="tema" cols="30" rows="3" placeholder="Sobre qué quieres hablar?"></textarea>
+                <p>Recuerda incluir un título para tu charla</p>
                 <button type="submit">Enviar</button>
             </form>
         </section>
