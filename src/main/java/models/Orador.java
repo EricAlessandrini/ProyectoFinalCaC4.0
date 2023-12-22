@@ -1,6 +1,13 @@
 package models;
 
-import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "oradores")
@@ -14,22 +21,23 @@ public class Orador{
 	private String apellido;
 	private String email;
 	private String tema;
-	
+	private LocalDateTime fecha_alta;
+
 	public Orador() {
-		
+
 	}
-	
+
 	public Orador(String nombre, String apellido, String email, String tema) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
 		this.tema = tema;
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
-		
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -62,8 +70,17 @@ public class Orador{
 		this.tema = tema;
 	}
 
+	public LocalDateTime getFechaAlta() {
+		return fecha_alta;
+	}
+
+	public void setFechaAlta(LocalDateTime fechaAlta) {
+		this.fecha_alta = fechaAlta;
+	}
+
+	@Override
 	public String toString() {
-		return this.nombre + " " 
+		return this.nombre + " "
 				+ this.apellido + "\n"
 				+ this.tema;
 	}

@@ -4,12 +4,11 @@ import java.util.List;
 
 import models.Orador;
 import repositories.OradorRepository;
-import repositories.OradorRepositoryImpl;
 
 public class OradorServiceImpl implements OradorService{
-	
+
 	private OradorRepository oradorRepository;
-	
+
 	public OradorServiceImpl(OradorRepository oradorRepository) {
 		this.oradorRepository = oradorRepository;
 	}

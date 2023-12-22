@@ -9,29 +9,33 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "ticket")
 public class Ticket {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nombre;
 	private String apellido;
-	private String correoElectronico;
+	private String email;
 	private Integer cantidad;
 	private String categoria;
 	private Double valorTotal;
-	
+
 	public Ticket() {
-		
+
 	}
-	
-	public Ticket(String nombre, String apellido, String correoElectronico,
+
+	public Ticket(String nombre, String apellido, String email,
 			Integer cantidad, String categoria, Double valorTotal) {
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.correoElectronico = correoElectronico;
+		this.email = email;
 		this.cantidad = cantidad;
 		this.categoria = categoria;
 		this.valorTotal = valorTotal;
+	}
+
+	public Long getId() {
+		return id;
 	}
 
 	public String getNombre() {
@@ -50,12 +54,12 @@ public class Ticket {
 		this.apellido = apellido;
 	}
 
-	public String getCorreoElectronico() {
-		return correoElectronico;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setCorreoElectronico(String correoElectronico) {
-		this.correoElectronico = correoElectronico;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Integer getCantidad() {
@@ -81,6 +85,6 @@ public class Ticket {
 	public void setValorTotal(Double valorTotal) {
 		this.valorTotal = valorTotal;
 	}
-	
-	
+
+
 }

@@ -23,7 +23,7 @@
                 <li><a href="#oradores">Los oradores</a></li>
                 <li><a href="#lugar_fecha">El lugar y la fecha</a></li>
                 <li><a href="#formulario">Conviertete en orador</a></li>
-                <li><a href="" class="tickets">Comprar tickets</a></li>
+                <li><a href="#" class="tickets">Comprar tickets</a></li>
             </ul>
 
             <svg class="menu-toggle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,21 +100,17 @@
                 <input type="text" name="email" id="email" placeholder="Correo Electronico">
                 <textarea name="temario" id="tema" cols="30" rows="3" placeholder="Sobre qué quieres hablar?"></textarea>
                 <p>Recuerda incluir un título para tu charla</p>
-                <button type="submit">Enviar</button>
-            </form>
+                <section class="botones-orador">
+                    <button type="submit">Enviar</button>
+	            </form>
+	            <form action="SvOrador" method="GET">
+					<button type="submit">Otros Oradores</button>
+				</form>
+				</section>
         </section>
     </main>
-    <footer>
-        <ul>
-            <li><a href="#">Preguntas frecuentes</a></li>
-            <li><a href="#">Contactanos</a></li>
-            <li><a href="#">Prensa</a></li>
-            <li><a href="#">Conferencias</a></li>
-            <li><a href="#">Terminos y condiciones</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Estudiantes</a></li>
-        </ul>
-    </footer>
+    
+    <%@ include file="footer.jsp" %>
     <script src="js/script_index.js"></script>
 </body>
 </html>

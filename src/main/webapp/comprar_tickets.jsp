@@ -19,7 +19,7 @@
             </div>
 
             <ul class="header-list">
-                <li><a href="index.jsp" class="tickets">Volver</a></li>
+                <li><a href="#" class="tickets">Volver</a></li>
             </ul>
 
             <svg class="menu-toggle" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,13 +51,14 @@
                 <p class="requisito">* presentar documentacion</p>
             </div>
         </section>
+        <!-- Formulario de compra de los tickets -->
         <section class="formulario_compra">
             <p>VENTA</p>
             <h1>VALOR DEL TICKET $200</h1>
-            <form action="" class="form_tickets" id="form_tickets">
-                <input type="text" name="Nombre" id="nameUser" placeholder="Nombre" required>
-                <input type="text" name="Apellido" id="lastnameUser" placeholder="Apellido" required>
-                <input type="email" name="Correo" id="emailUser" placeholder="Correo Electrónico" required>
+            <form action="SvTicket" method="POST" class="form_tickets" id="form_tickets">
+                <input type="text" name="nombre" id="nameUser" placeholder="Nombre" required>
+                <input type="text" name="apellido" id="lastnameUser" placeholder="Apellido" required>
+                <input type="email" name="email" id="emailUser" placeholder="Correo Electrónico" required>
                 <input type="number" name="cantidad" id="ticketAmount" placeholder="Cantidad de entradas" min="1" required>
                 <select name="categoria_descuento" id="discountCat" required>
                     <option value="0">--Seleccionar un descuento--</option>
@@ -68,26 +69,19 @@
                 <div class="total_compra">
                     <p>Total a pagar: $</p>
                     <p class="valor_de_la_compra" id="valorTotalCompra"></p>
+                    <input type="hidden" name="valorCompra" id="valorCompra" value="">
                 </div>
                 <div class="botones_form">
                     <button type="reset" class="boton_formulario_reset">Borrar</button>
                     <button type="button" class="boton_formulario_resumen" id="resumen">Resumen</button>
+                    <button type="submit" class="boton_formulario_envio" id="comprar">Comprar</button>
                 </div>
             </form>
         </section>
     </main>
-    <!-- Comienzo del Footer de la pÃ¡gina-->
-    <footer>
-        <ul>
-            <li><a href="#">Preguntas frecuentes</a></li>
-            <li><a href="#">Contactanos</a></li>
-            <li><a href="#">Prensa</a></li>
-            <li><a href="#">Conferencias</a></li>
-            <li><a href="#">Terminos y condiciones</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Estudiantes</a></li>
-        </ul>
-    </footer>
+    
+    
+    <%@ include file="footer.jsp" %>
     <script src="js/script_comprar_tickets.js"></script>
 </body>
 </html>
